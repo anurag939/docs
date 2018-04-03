@@ -90,7 +90,25 @@ Follow the below steps if you want to merge the changes done in QA branch to DEV
   to checkout a tag:
     first checkout the branch in which the tag has been created:  git clone -b <banchname> <repositoryURL>
     then checkout the tag using the command:                      git checkout tags/<tagname>
- 
+
+10) Rebase
+
+Rebasing actually moves your branch from where you forked it to the latest commits on the parent branch.
+Suppose your parent branch is a master branch and you checked out a new branch let's say rebase_test_branch from it.
+Then you made few changes in your rebase_test_branch and then commited and pushed it to server.
+After that you also made changes to the master branch and then commited and pushed it to the server.
+
+Now you want your changes on top of the lastest master branch.So how git will do this is it will first checkout the latest master branch
+and then it will replay your changes that you have made in rebase_test_branch. 
+
+So in order to do this checkout the branch rebase_test_branch and then run the following command:
+
+      git rebase origin/master
+
+
+
+
+
  
  
  
