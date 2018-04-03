@@ -82,6 +82,15 @@ Follow the below steps if you want to merge the changes done in QA branch to DEV
     git commit -a (this will commit your changes)
 
 
+ 9)Tags
+ create a tag using following command:
+    git tag <tagname>
+    git push <branchname> <tagname>
+    
+  to checkout a tag:
+    first checkout the branch in which the tag has been created:  git clone -b <banchname> <repositoryURL>
+    then checkout the tag using the command:                      git checkout tags/<tagname>
+ 
  
  
  
