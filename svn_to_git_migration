@@ -1,3 +1,4 @@
+STEP 1)
 install java and git svn 
 download svn-migration-scripts.jar (download in your home directory)
 java -jar ~/svn-migration-scripts.jar authors http://anyscheduler.org/svn/anurag >> authors.txt
