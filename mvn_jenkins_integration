@@ -20,4 +20,4 @@ https://www.vultr.com/docs/how-to-install-apache-maven-on-ubuntu-16-04
    v. Give the location of your root pom.xml, if it is in the root folder of project it will be pom.xml itself otherwise give the relative path.
    vi. Save the settings
 5. Build Now
-6. Check logs
+6. Check logs under Console Output
