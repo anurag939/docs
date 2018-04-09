@@ -14,5 +14,7 @@ java -Dfile.encoding=utf-8 -jar ~/svn-migration-scripts.jar sync-rebase
 java -Dfile.encoding=utf-8 -jar ~/svn-migration-scripts.jar clean-git --force
 
 
-9) After this you need to share 
+9) After this you need to share (make sure you create a new empty repository in bitbucket)
 git remote add origin https://anurag939@bitbucket.org/anurag939/anurag.git
+
+10) git push -u origin --all
