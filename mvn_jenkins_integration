@@ -1,0 +1,23 @@
+1. Install Maven on the VM instance: 
+https://www.vultr.com/docs/how-to-install-apache-maven-on-ubuntu-16-04
+
+2. Go to Jenkins -> Manage Jenkins -> Global Tool Configuration
+   i. Under JDK, Give a JDK name, uncheck "Install Automatically", give the path to JAVA_HOME (ex : /usr/lib/jvm/java-8-oracle)
+   
+   ii. Under Maven (not Maven Configuration), Add Maven -> Give a name for Maven (ex : MVN_HOME), uncheck "Install Automatically" and 
+   give path to MAVEN_HOME (ex : /opt/maven)
+   
+   iii. Save the settings
+   
+3. Under Manage Jenkins, go to Manage Plugins
+   If not installed already, go to Available tab, and search Maven, Locate "Maven Integration Plugin" and Install it.
+   
+   
+4. i. Go to Jenkins Dashboard -> New Item -> Name -> Select Maven project
+   ii. Give name for Maven project
+   iii. Under Source Code Management, chose Git and provide the maven project's git url and credentials for the same.
+   iv. Select build trigger type.
+   v. Give the location of your root pom.xml, if it is in the root folder of project it will be pom.xml itself otherwise give the relative path.
+   vi. Save the settings
+5. Build Now
+6. Check logs
