@@ -1,18 +1,18 @@
-STEP 1)
-install java and git svn 
-download svn-migration-scripts.jar (download in your home directory)
-java -jar ~/svn-migration-scripts.jar authors http://anyscheduler.org/svn/anurag >> authors.txt
-git svn clone --stdlayout --prefix='' --authors-file=authors.txt http://anyscheduler.org/svn/anurag/perl_project anurag
-java -Dfile.encoding=utf-8 -jar ~/svn-migration-scripts.jar clean-git --force
+1) install java and git svn 
+2) download svn-migration-scripts.jar (download in your home directory)
+3) java -jar ~/svn-migration-scripts.jar
+4) java -jar ~/svn-migration-scripts.jar authors http://anyscheduler.org/svn/anurag >> authors.txt
+5) git svn clone --stdlayout --prefix='' --authors-file=authors.txt http://anyscheduler.org/svn/anurag/perl_project anurag
+6) java -Dfile.encoding=utf-8 -jar ~/svn-migration-scripts.jar clean-git --force
 
 
-add few files to the snv then run the following command
+7) add few files to the snv then run the following command
 git svn fetch
 
-after that run the following command to see the files in your current working directory
+8) after that run the following command to see the files in your current working directory
 java -Dfile.encoding=utf-8 -jar ~/svn-migration-scripts.jar sync-rebase
 java -Dfile.encoding=utf-8 -jar ~/svn-migration-scripts.jar clean-git --force
 
 
-After this you need to share 
+9) After this you need to share 
 git remote add origin https://anurag939@bitbucket.org/anurag939/anurag.git
