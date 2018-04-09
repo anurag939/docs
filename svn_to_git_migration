@@ -16,6 +16,3 @@ java -Dfile.encoding=utf-8 -jar ~/svn-migration-scripts.jar clean-git --force
 
 After this you need to share 
 git remote add origin https://anurag939@bitbucket.org/anurag939/anurag.git
-templine
-templine
-templine
