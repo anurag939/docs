@@ -26,6 +26,13 @@ GitHub project – project url -- https://github.com/anurag939/docs/demo_project
 Click With Ant
 	Ant Version – Default
 	JDK JDK_8
+
+3a.	Build
+	Ant Version - Default
+	Targets compile jar run
+	build file - /var/lib/jenkins/workspace/sudha_ant_project1/demo_projects/ant_basic/build.xml
+
+
 4.Save
 5.Build now
 6.In Console output the build should be success
