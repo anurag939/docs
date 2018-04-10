@@ -1,0 +1,35 @@
+git clone https://github.com:anurag939/docs
+ls
+inside docs --> demo_projects
+created ant_basic directory
+now inside ant_basic directory created src directory
+I,e ant_basic--> src
+Inside src we are keeping our ant project oata(mkdir oata)
+Src oata
+In oata create a file HelloWorld.java
+Inside ant_basic directory keep build.xml file
+Now in demo_projects ] git add ant_basic
+Git commit –m “added ant_basic”
+Git push origin master
+
+In Jenkins dashboard
+1.	Give project Name = Sudha_ant_project1
+GitHub project – project url -- https://github.com/anurag939/docs/demo_projects/ant_basic/
+
+2.	Source code management
+`	Git 
+	Repositories 
+		Repository URL https://github.com/anurag939/docs
+		Credentials 
+
+3.	Build Environement
+Click With Ant
+	Ant Version – Default
+	JDK JDK_8
+4.Save
+5.Build now
+6.In Console output the build should be success
+
+Note: 
+We can see all the Jenkins workspace in clouldVM 35.196.37.115 under /var/lib/Jenkins/workspace/Sudha_ant_project1
+
