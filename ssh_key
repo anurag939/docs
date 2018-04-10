@@ -1,0 +1,9 @@
+SH key of a VM
+
+Ls –al
+Cd .ssh
+Ssh-keygen –t rsa
+Cat id_rsa.pub
+
+Add this rsa key in SSH key tab as a new key
+
