@@ -21,9 +21,9 @@
     <target name="run">
         <java jar="build/jar/HelloWorld.jar" fork="true"/>
     </target>
-    
+
     <property name="report.dir"  value="${build.dir}/junitreport"/>
-    
+
     <target name="junit" depends="jar">
         <mkdir dir="${report.dir}"/>
         <junit printsummary="yes">
