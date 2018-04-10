@@ -1,0 +1,13 @@
+How to add github project in Jenkins,
+
+First login to github 
+
+Goto settings and add the webhooks http://anyscheduler.org:8080/github-webhook/
+
+Injenkins create the new item with freestyle project with git option and give the correct github URL
+
+Do some changes in the github project after checking out the project from github
+Add, commit and push the changes
+
+You should be able to see the build executor.
+
