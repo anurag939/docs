@@ -2,7 +2,7 @@
 2) download svn-migration-scripts.jar (download in your home directory)
 3) java -jar ~/svn-migration-scripts.jar verify
 4) java -jar ~/svn-migration-scripts.jar authors http://anyscheduler.org/svn/anurag >> authors.txt
-5) git svn clone --stdlayout --prefix='' --authors-file=authors.txt http://anyscheduler.org/svn/anurag/perl_project anurag
+5) git svn clone --stdlayout --authors-file=authors.txt http://anyscheduler.org/svn/anurag/perl_project anurag
 6) java -Dfile.encoding=utf-8 -jar ~/svn-migration-scripts.jar clean-git --force
 
 
@@ -18,3 +18,4 @@ java -Dfile.encoding=utf-8 -jar ~/svn-migration-scripts.jar clean-git --force
 git remote add origin https://anurag939@bitbucket.org/anurag939/anurag.git
 
 10) git push -u origin --all
+11) git push --tags
