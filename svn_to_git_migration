@@ -4,6 +4,14 @@
 4) java -jar ~/svn-migration-scripts.jar authors http://anyscheduler.org/svn/anurag >> authors.txt
 5) git svn clone --stdlayout --authors-file=authors.txt http://anyscheduler.org/svn/anurag/perl_project anurag
 6) java -Dfile.encoding=utf-8 -jar ~/svn-migration-scripts.jar clean-git --force
+(if the clean is not working you will need to create the branches and tags manually in origin from remote. For example:
+git branch anurag_branch_1 remotes/origin/anurag_branch_1
+
+and
+
+git tag rev1 remotes/origin/tags/rev1
+
+now if you run git branch -a and git tag command you should see you branches and tags on the origin of the local branch)
 
 
 7) add few files to the snv then run the following command
