@@ -1,7 +1,7 @@
 <project>
 
 
-<property name="antlib" location="/usr/share/ant/lib"/>
+<property name="antlib" location="/usr/share/java"/>
 	
     <target name="clean">
         <delete dir="build"/>
@@ -30,7 +30,7 @@
     <junit printsummary="yes" haltonfailure="no">
 
 	<!-- Project classpath, must include junit.jar -->
-	<!--classpath location="${antlib}" /-->
+	<classpath location="${antlib}" />
 		
 	<!-- test class -->
 	<classpath location="build/classes" />
