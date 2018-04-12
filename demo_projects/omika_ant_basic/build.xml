@@ -30,7 +30,7 @@
     <junit printsummary="yes" haltonfailure="no">
 
 	<!-- Project classpath, must include junit.jar -->
-	<classpath location="/var/lib/jenkins/plugins/junit/WEB-INF/lib/junit.jar" />
+	<classpath location="/var/lib/jenkins/plugins/junit/WEB-INF/lib" />
 		
 	<!-- test class -->
 	<classpath location="build/classes" />
