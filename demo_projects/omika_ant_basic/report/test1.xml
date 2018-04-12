@@ -1,0 +1,14 @@
+Buildfile: /home/omika/12april1/docs/demo_projects/omika_ant_basic/build.xml
+
+compile:
+    [javac] /home/omika/12april1/docs/demo_projects/omika_ant_basic/build.xml:9: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /home/omika/12april1/docs/demo_projects/omika_ant_basic/build/classes
+
+jar:
+      [jar] Building jar: /home/omika/12april1/docs/demo_projects/omika_ant_basic/build/jar/HelloWorld.jar
+
+run:
+     [java] Hello World
+
+BUILD SUCCESSFUL
+Total time: 1 second
