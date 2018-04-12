@@ -1,5 +1,8 @@
 <project>
 
+
+<property name="antlib" location="/usr/share/ant/lib"/>
+	
     <target name="clean">
         <delete dir="build"/>
     </target>
@@ -27,10 +30,10 @@
     <junit printsummary="yes" haltonfailure="no">
 
 	<!-- Project classpath, must include junit.jar -->
-	<!--classpath refid="test.path" /-->
+	<classpath refid="${antlib}" />
 		
 	<!-- test class -->
-	<!--classpath location="${test.classes.dir}" /-->
+	<classpath location="build/classes">
 		
 	<test name="oata.HelloWorld" 
 		haltonfailure="no" todir="report">
