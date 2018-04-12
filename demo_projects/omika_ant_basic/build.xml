@@ -33,7 +33,7 @@
 	<classpath refid="${antlib}" />
 		
 	<!-- test class -->
-	<classpath location="build/classes">
+	<classpath location="build/classes" />
 		
 	<test name="oata.HelloWorld" 
 		haltonfailure="no" todir="report">
