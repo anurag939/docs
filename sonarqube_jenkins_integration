@@ -1,0 +1,63 @@
+1. Add Sonarqube plugin in jenkins
+2. Install Sonarqube on the same server(VM instance) wherever jenkins is installed. 
+   i. Follow this :
+	https://www.vultr.com/docs/how-to-install-sonarqube-on-ubuntu-16-04
+	
+	ii. Everywhere in the above tutorial, replace sonar.yourdomain.com with sonar.anyscheduler.org
+	
+	iii. In the Configure Reverse Proxy Step, do this :
+
+	<VirtualHost *:80>  
+		ServerName sonar.anyscheduler.org
+		ServerAdmin admin@anyscheduler.org
+		ProxyPreserveHost On
+		ProxyPass / http://localhost:9000/
+		ProxyPassReverse / http://localhost:9000/
+		TransferLog /var/log/apache2/sonar.anyscheduler.org_access.log
+		ErrorLog /var/log/apache2/sonar.anyscheduler.org_error.log
+	</VirtualHost>
+
+3. In Manage Jenkins -> Configure System,
+
+	i. Go to Sonarqube server, give a name: sonar_server
+							and default server url: http://localhost:9000
+							
+	ii. Save the settings
+	
+4. In Manage Jenkins -> Global Tool Configuration,
+
+	i. Go to Sonarqube Scanner
+	ii. Choose Install Automatically
+	iii. Select Add Installer Drop Down -> Choose Install from Maven Central.
+	
+	This will provide a Sonarqube Runner executable.
+	
+5. Create new free style project:
+	i. Choose Github project
+	ii. Give project url : https://github.com/anurag939/docs/demo_projects/springbootwebapp/
+	iii. Choose SCM as Git : Repository URL - https://github.com/anurag939/docs.git
+						Provide Credentials if required.
+						
+	
+	iv. From build step, choose Execute SonarQube Scanner
+	v. Choose JDK as JDK_1.8
+	
+	Now either we can give a path to project properties file or we can add properties under Analysis Properties.
+	
+	vi. Add the following analysis properties:
+	
+
+	#Required metadata
+	sonar.projectKey=springbootwebapp
+	sonar.projectName=springbootwebapp
+	sonar.projectVersion=1.0
+
+	#Path to source directory
+	sonar.sources=/var/lib/jenkins/workspace/$JOB_NAME/demo_projects/springbootwebapp/src
+	
+	vii. Save the project
+	viii. Build Now
+	
+6. Go to the following url to see the SonarQube Report:
+	http://sonar.anyscheduler.org/projects
+	
