@@ -30,7 +30,7 @@
     <junit printsummary="yes" haltonfailure="no">
 
 	<!-- Project classpath, must include junit.jar -->
-	<classpath refid="${antlib}" />
+	<classpath location="${antlib}" />
 		
 	<!-- test class -->
 	<classpath location="build/classes" />
