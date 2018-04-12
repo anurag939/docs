@@ -23,7 +23,7 @@
     </target>
 
     <target name="junit" depends="compile">
-
+    <mkdir dir="report"/>
     <junit printsummary="yes" haltonfailure="no">
 
 	<!-- Project classpath, must include junit.jar -->
