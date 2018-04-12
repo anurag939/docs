@@ -1,25 +1,37 @@
-<project>
+<project name="SampleJUnitTests" default="dist" basedir=".">
+    <description>
+        Sample JUnit Tests
+    </description>
+  <!-- set global properties for this build -->
 
-    <target name="clean">
-        <delete dir="build"/>
-    </target>
+  <property name="project_name" value="junitSamples"/>
+  <property name="src" location="src"/>
+  <property name="build" location="bin"/>
+  <property name="dist"  location="dist"/>
+  <property name="lib"  location="lib"/>
+  <property name="res"  location="res"/>
+  <property name="reports" location="reports"/>
 
-    <target name="compile">
-        <mkdir dir="build/classes"/>
-        <javac srcdir="src" destdir="build/classes"/>
-    </target>
+  <!-- the names of various distributable files -->
+  <property name="jar_name" value="${project_name}.jar"/>
+  <property name="war_name" value="${project_name}.war"/>
 
-    <target name="jar">
-        <mkdir dir="build/jar"/>
-        <jar destfile="build/jar/HelloWorld.jar" basedir="build/classes">
-            <manifest>
-                <attribute name="Main-Class" value="oata.HelloWorld"/>
-            </manifest>
-        </jar>
-    </target>
+    <!-- top level targets -->
 
-    <target name="run">
-        <java jar="build/jar/HelloWorld.jar" fork="true"/>
-    </target>
+  <target name="compile" depends="init" description="compile the source code " >
+        <javac srcdir="${src}" destdir="${build}">  
+            <classpath>
+                <fileset dir="lib">
+                    <include name="**/*.jar"/>
+                </fileset>
+            </classpath>
+        </javac>
 
-</project>
+  </target>
+
+  <target name="dist" depends="compile" description="generate the distributable files " >
+
+    <!-- Put everything in ${build} into the MyProject-${DSTAMP}.jar file -->
+    <jar jarfile="${dist}/${jar_name}" basedir="${build}"/>
+
+  </target>
