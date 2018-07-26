@@ -216,6 +216,62 @@ print(max(new_list))
 
 Program13.py
 -------------
+import random
+import sys
+import os
+
+pairs1 = {'flower':'rose',
+          'fruit':'apple',
+          'tree':'banyan',
+          'building material':'cement'}
+
+print(pairs1['flower'])
+
+print(len(pairs1))
+
+del(pairs1['building material'])
+
+pairs1['tree'] = 'babool'
+
+print(pairs1['tree'])
+
+print(len(pairs1))
+
+print(pairs1.get('fruit'))
+
+print(pairs1.keys())
+
+print(pairs1.values())
+
+
+Program 14
+----------
+i=0
+
+while i<6:
+    i+=1
+    print(i)
+
+
+Program 15
+----------
+i=0
+numbers = []
+
+while i < 6:
+	print("At the top i is %d"    %i)
+	numbers.append(i)
+
+	i = i + 1
+	print("Numbers now:",numbers)
+	print("At the bottom i is %d" %i)
+
+print("The numbers: ")
+
+for num in numbers:
+	print(num)
+    
+    
 
 
 
