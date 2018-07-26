@@ -63,4 +63,171 @@ print("(1+2-3)*2=",(1+2-3)*2)
 
 Program4.py
 ------------
+print("\n-----Variables and Printing----\n")
+my_name = 'Anurag'
+my_age=33
+my_weight=78
+my_eyes='black'
+my_teeth='yellow'
+my_height=179 #cm
+my_hair = 'black'
+print("Let's talk about %s."%my_name)
+print("He's %d cms tall."%my_height)
+print("He's %d kgs heavy"%my_weight)
+print("Actually its' overweight")
+print("He's got %s eyes and %s hair"%(my_eyes,my_hair))
+print("If I add %d,%d, and %d I get %d"%(my_age,my_weight,my_height,my_age+my_weight+my_height))
+
+
+Program5.py
+------------
+print("\n----Taking Input----\n")
+print("How old are you?",)
+age = input()
+print("How tall are you?")
+height = input()
+print("How much do you wieght?",)
+weight = input()
+print("So, you're %r years old, %r cm tall and %r kg heavy." %(age,height,weight))
+
+
+Program6.py
+-----------
+print("\n-----Prompting for input----\n")
+age = input("How old are you?")
+height = input("How tall are you?")
+weight = input("How much do you weight?")
+
+print("So, you're %r years old, %r cm tall and %r kg heavy."%(age,height,weight))
+
+
+
+Program7.py
+------------
+print("\n----Parameters,Unpacking,Variables-----\n")
+
+from sys import argv
+
+script, first, second, third = argv
+
+print("The script is called:",script)
+print("Your first variable is:",first)
+print("Your second variable is:",second)
+print("Your third variable is:",third)
+
+# run the program from the command prompt like : python ex3.py 1st 2nd 3rd
+
+Program8.py
+------------
+age = 21
+
+if age > 16:
+    print('you are old enough to drive')
+else:
+    print('you are not old enough to drive')
+
+
+if age >= 21:
+    print('you are old enough to drive tractor trailer')
+elif age > 16:
+    print("You are old enough to drive")
+else:
+    print('You are not old enough to drive')
+    
+
+Program9.py
+------------
+cars = ['scorpio','wagon-r','mercedes','hyundai','Maruti']
+
+print(cars[0])
+
+print("I like %s" %cars[2],"car")
+
+Program10.py
+-----------
+grocery_list = ['Potatoes','Tomatos','Banana','Pomegrante']
+
+print(grocery_list[0])
+
+grocery_list[0] = "Paneer"
+
+print("First Item",grocery_list[0])
+
+print(grocery_list[1:3]) #not included index 3 little bit wierd have to remember
+
+other_events = ['Wash Clothes','Clean the Bike']
+
+to_do_list = [grocery_list,other_events]
+
+print(to_do_list)
+
+print(to_do_list[0][0])
+
+print(to_do_list[1][0])
+
+grocery_list.append('Green peas')
+print(grocery_list)
+grocery_list.insert(1,'tea')
+print(grocery_list)
+grocery_list.remove('tea')
+print(grocery_list)
+grocery_list.sort()
+print(grocery_list)
+grocery_list.reverse()
+print(grocery_list)
+del grocery_list[1]
+print(grocery_list)
+print(to_do_list)
+
+to_do_list2 = other_events + grocery_list
+print(len(to_do_list2))
+print(to_do_list2)
+print(max(to_do_list2))
+print(min(to_do_list2))
+
+
+Program11.py
+-------------
+tup1 = ('physics', 'chemistry', 1997, 2000);
+tup2 = (1, 2, 3, 4, 5, 6, 7 );
+print "tup1[0]: ", tup1[0];
+print "tup2[1:5]: ", tup2[1:5];
+
+Program12.py
+-------------
+#tuple is used to create a list which you don't want to change
+#if you want to change tuple change it to list then change it back to tuple
+
+pi_tuple = (3,1,4,1,5,9)
+
+new_tuple = list(pi_tuple)
+
+new_list = tuple(new_tuple)
+
+
+print("tuple:")
+print(len(new_tuple))
+print(min(new_tuple))
+print(max(new_tuple))
+print("list:")
+print(len(new_list))
+print(min(new_list))
+print(max(new_list))
+
+Program13.py
+-------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
