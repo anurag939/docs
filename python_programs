@@ -155,7 +155,7 @@ print("First Item",grocery_list[0])
 
 print(grocery_list[1:3]) #not included index 3 little bit wierd have to remember
 
-other_events = ['Wash Clothes','Clean the Bike']
+other_events = ['Go to Market','Go to Bike Servicing']
 
 to_do_list = [grocery_list,other_events]
 
